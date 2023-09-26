@@ -18,15 +18,47 @@
       <div class="add-bnt">
         <button class="new-book bnt">NEW BOOK</button>
         <dialog class="modal">
-          <form action="">
-            <button type="submit" class="bnt">ADD</button>
-            <button type="button" class="bnt close-bnt" formmethod="dialog">
-              CLOSE
-            </button>
+          <form action="" method="post">
+            <div class="form-row">
+              <label for="book-name">Name</label>
+              <input id="book-name" name="book-name" type="text" />
+            </div>
+            <div class="form-row">
+              <label for="author-name">Author</label>
+              <input id="author-name" name="author-name" type="text" />
+            </div>
+            <div class="form-row">
+              <fieldset class="legacy-form-row">
+                <legend>Have you read this book?</legend>
+                <input id="read1" type="radio" name="read-type" value="read" />
+                <label for="read1" class="radio-label">Read</label>
+                <input
+                  id="read2"
+                  type="radio"
+                  name="read-type"
+                  value="in-progress"
+                />
+                <label for="read2" class="radio-label">In-progress</label>
+                <input
+                  id="read3"
+                  type="radio"
+                  name="read-type"
+                  value="not-read"
+                />
+                <label for="read3" class="radio-label">Not Read</label>
+              </fieldset>
+            </div>
+            <div class="form-row-bnt">
+              <button type="submit" class="bnt">ADD</button>
+              <button type="button" class="bnt close-bnt" formmethod="dialog">
+                CLOSE
+              </button>
+            </div>
           </form>
         </dialog>
       </div>
     </header>
+
     <script src="./script.js"></script>
   </body>
 </html>
