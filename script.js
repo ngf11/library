@@ -34,9 +34,10 @@ function renderLibrary() {
   const libraryContainer = document.querySelector(".container");
   libraryContainer.innerHTML = ""; // Clear the container before rendering
 
-  myLibrary.forEach((book) => {
+  myLibrary.forEach((book, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
+    card.setAttribute("data-index", index);
     card.innerHTML = `
     <button class ="deleteBnt bnt">Delete</button>
       <h3>${book.title}</h3>
@@ -83,7 +84,14 @@ form.addEventListener("submit", function (event) {
 //Delete button
 div.addEventListener("click", (event) => {
   if (event.target.classList.contains("deleteBnt")) {
-    myLibrary.pop();
-    renderLibrary();
+    const card = event.target.closest(".card");
+    if (card) {
+      const index = card.getAttribute("data-index");
+      if (index !== null) {
+        // Convert the index to a number and remove the corresponding book
+        myLibrary.splice(parseInt(index), 1);
+        renderLibrary();
+      }
+    }
   }
 });
