@@ -66,6 +66,7 @@ closeButton.addEventListener("click", () => {
 submitButton.addEventListener("click", () => {
   modal.close();
 });
+
 //headeling from post
 const form = document.getElementById("form");
 form.addEventListener("submit", function (event) {
@@ -77,4 +78,12 @@ form.addEventListener("submit", function (event) {
   ).value;
   const newBook = new Book(bookName, author, bookRead);
   renderLibrary();
+});
+
+//Delete button
+div.addEventListener("click", (event) => {
+  if (event.target.classList.contains("deleteBnt")) {
+    myLibrary.pop();
+    renderLibrary();
+  }
 });
