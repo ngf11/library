@@ -22,6 +22,9 @@ body {
   color: #f1485b;
   font-size: 2rem;
 }
+.spanAuthor {
+  color: #f1485b;
+}
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -137,4 +140,17 @@ body {
   box-shadow: 4px 4px 4px black;
   border-radius: 0.3rem;
   font-weight: bolder;
+}
+
+.bnt:hover {
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  box-shadow: 4px 4px 4px black;
+  border-radius: 0.3rem;
+  font-weight: bolder;
+  transition: background-color 1s;
 }

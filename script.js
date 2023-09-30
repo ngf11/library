@@ -41,7 +41,7 @@ function renderLibrary() {
     card.innerHTML = `
     <button class ="deleteBnt bnt">Delete</button>
       <h3>${book.title}</h3>
-      <p>by ${book.author}</p>
+      <p>by<span class ="spanAuthor"> ${book.author}</span></p>
       <p>Have you read this? click to toggle</p>
       <button class="readBtn bnt">Read</button>
      `;
@@ -113,44 +113,3 @@ div.addEventListener("click", (event) => {
     }
   }
 });
-
-//edit button
-// div.addEventListener("click", (event) => {
-//   if (event.target.classList.contains("editBtn")) {
-//     const modal = document.createElement("dialog");
-//     modal.classList.add("modal");
-//     modal.innerHTML = `
-//     <div class="form-row dialog-modal">
-//     <fieldset class="legacy-form-row">
-//       <legend>Have you read this book?</legend>
-//       <input id="read1" type="radio" name="read-type" value="read" />
-//       <label for="read1" class="radio-label">Read</label>
-//       <input
-//         id="read2"
-//         type="radio"
-//         name="read-type"
-//         value="in-progress"
-//       />
-//       <label for="read2" class="radio-label">In-progress</label>
-//       <input
-//         id="read3"
-//         type="radio"
-//         name="read-type"
-//         value="not-read"
-//       />
-//       <label for="read3" class="radio-label">Not Read</label>
-//     </fieldset>
-//     <button type="submit" form="nameform" class = "submit-modal bnt" value="Submit">Submit</button>
-//   </div>
-//     `;
-//     document.body.appendChild(modal); // Append the modal to the document body
-//     modal.showModal(); // Show the modal dialog
-//     // const buttonSubmit = document.querySelector(".submit-modal");
-//     // buttonSubmit.addEventListener("click", () => {
-//     //   console.log("Fix this");
-//     //   modal.close();
-//     // });
-//   }
-// });
-
-// ...
