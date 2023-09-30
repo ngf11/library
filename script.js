@@ -92,10 +92,10 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
   const bookName = document.getElementById("book-name").value;
   const author = document.getElementById("author-name").value;
-  const bookRead = document.querySelector(
-    'input[name="read-type"]:checked'
-  ).value;
-  const newBook = new Book(bookName, author, bookRead);
+  // const bookRead = document.querySelector(
+  //   'input[name="read-type"]:checked'
+  // ).value;
+  const newBook = new Book(bookName, author);
   renderLibrary();
 });
 
