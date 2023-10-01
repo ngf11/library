@@ -1,3 +1,11 @@
+fix the toggle button go from read - default to not read
+
+
+
+
+
+
+
 oriinal logic
 
 /* const myLibrary = [];
